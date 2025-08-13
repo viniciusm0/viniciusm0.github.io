@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("../fonts/Coolvetica-Regular.otf") format(opentype);
+    font-weight: Regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TASAOrbiterText-Regular";
+    src: url("../fonts/TASAOrbiterText-Regular.otf");
+    font-weight: Regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TASAOrbiterText-Medium";
+    src: url("../fonts/TASAOrbiterText-Medium.otf");
+    font-weight: Medium;
+    font-style: normal;
+}
+
+
+:root, :root[data-theme='dark'] {
+
+    --bg-color: linear-gradient(180deg, #121212 0%, #1F2937 100%);
+    --primary-color: #121212;
+    --secundary-color: #1F2937;
+    --border-color: #374151;
+
+    --title-color: #E5E7EB;
+    --text-color: #9CA3AF;
+    --btn-primary: #60A5FA;
+    --link-color: #60A5FA;
+
+}
+
+:root[data-theme='light'] {
+
+    --bg-color: linear-gradient(180deg, #F9FAFB 0%, #e4e4e4 100%);
+    --primary-color: #F9FAFB;
+    --secundary-color: #EEEEEE;
+    --border-color: #E5E7EB;
+
+    --title-color: #1E1E1E;
+    --text-color: #6B7280;
+    --btn-primary: #2563EB;
+    --link-color: #2563EB;
+}
+
+html {
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+body {
+    background: transparent;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+i {
+    color: var(--text-color);
+    font-size: calc(0.1em + 1.5vw);
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2vh;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--secundary-color);
+    width: 48%;
+    border-radius: 65em;
+    box-shadow: 
+        0 2px 8px 0 rgba(0,0,0,0.10),
+        0 8px 32px 0 rgba(55, 65, 81, 0.25);
+}
+
+.header__brand a img{
+    width: calc(1em + 2.5vw);
+    border: 65em;
+}
+
+.header__menu {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2vw;
+}
+
+.header__menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: 'TASAOrbiterText-Regular',sans-serif;
+    font-weight: Regular;
+    font-size: calc(0.93em + 0.1vw);
+}
+
+
