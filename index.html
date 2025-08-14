@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +12,33 @@
 <body>
     <header class="header">
         <div class="container-header">
-            <div class="header__brand">
-                <a href="#"><img id="img-logo" src="assets/img/logo-dark.png" alt="Logo referente ao criador do site"></a>
+            <div class="header__nav">
+                <div class="header__brand">
+                    <a href="#"><img id="img-logo" src="assets/img/logo-dark.png" alt="Logo referente ao criador do site"></a>
+                </div>
+                <nav class="menu__desktop">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#about-me">Sobre mim</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>  
+                </nav>
+                <button class="header__actions">
+                    <i id="toggleTheme" class="bi bi-brightness-high-fill"></i>
+                    <i id="toggleMenu" class="bi bi-list"></i>
+                </button>
             </div>
-            <div class="header__menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#about-me">Sobre mim</a>
-                <a href="#experiencia">Experiência</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
-            </div>
-            <div class="header__actions">
-                <i id="toggleTheme" class="bi bi-moon-stars-fill"></i>
-            </div>
+            <nav id="menuOverflow" class="menu__hidden">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#about-me">Sobre mim</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>  
+            </nav>
         </div>
     </header>
     <script src="assets/js/script.js"></script>

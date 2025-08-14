@@ -29,6 +29,7 @@
 
     --title-color: #E5E7EB;
     --text-color: #9CA3AF;
+    --text-hover-color:#9dc1ff;
     --btn-primary: #60A5FA;
     --link-color: #60A5FA;
 
@@ -43,6 +44,7 @@
 
     --title-color: #1E1E1E;
     --text-color: #6B7280;
+    --text-hover-color: #4b93ff;
     --btn-primary: #2563EB;
     --link-color: #2563EB;
 }
@@ -51,6 +53,7 @@ html {
     background: var(--bg-color);
     background-repeat: no-repeat;
     min-height: 100%;
+    transition: background .4s ease-in-out;
 }
 
 body {
@@ -70,6 +73,7 @@ i {
     color: var(--text-color);
     font-size: calc(1.2em + 0.8vw);
     cursor: pointer;
+    transition: ease-in-out .4s;
 }
 
 header {
@@ -81,15 +85,24 @@ header {
 
 .container-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background: var(--secundary-color);
-    width: 50%;
-    border-radius: 65em;
+    width: 56%;
+    border-radius: 2em;
     box-shadow: 
         0 2px 8px 0 rgba(0,0,0,0.10),
         0 8px 32px 0 rgba(55, 65, 81, 0.25);
+    transition: background .4s ease-in-out;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .header__brand a img{
@@ -97,7 +110,7 @@ header {
     border: 65em;
 }
 
-.header__menu {
+.menu__desktop ul {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -105,13 +118,149 @@ header {
     gap: 1.2vw;
 }
 
-.header__menu a {
+.menu__desktop ul li {
+    transition: .4s ease-in-out;
+}
+
+.menu__desktop ul li a {
     text-decoration: none;
     color: var(--text-color);
     cursor: pointer;
     font-family: 'TASAOrbiterText-Regular',sans-serif;
     font-weight: Regular;
-    font-size: calc(0.93em + 0.2vw);
+    font-size: calc(0.93rem + 0.2vw);
+    transition: color .3s ease-in-out;
 }
 
+.menu__desktop ul li a:hover, .menu__desktop ul li:hover  {
+    color: var(--text-hover-color);
+    transition: .3 ease-in-out;
+    transform: scale(1.05);
+}
+
+.header__actions {
+    border: none;
+    background-color: transparent;
+    transition: .3s ease-in-out;
+}
+
+#toggleMenu {
+    display: none;
+}
+
+.header__actions i:hover, .header__actions:hover {
+    transform: scale(1.2);
+    color: var(--text-hover-color);
+}
+
+.menu__hidden {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    background: var(--secundary-color);
+    border-top:var(--text-color) 0px solid;
+
+    transition: max-height 0.4s ease-in-out,
+                border-top 0.3s ease-in-out,
+                padding 0.3s ease-in-out; 
+}
+
+.menu__hidden ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+    opacity: 0;
+
+    transition: opacity 0.4s ease-in-out,
+                gap 0.4s ease-in-out;
+}
+
+.menu__hidden ul li {
+    text-align: center;
+    transform: translateY(-40px) scale(0.8);
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu__active {
+    max-height: 1000px;
+    width: 90%;
+    padding: 10em;
+    border-top:var(--text-color) 1px solid;
+
+    transition: max-height 0.6s ease-in-out,
+                border-top 0.5s ease-in-out,
+                padding 0.5s ease-in-out; 
+}
+
+.menu__active ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+    opacity: 1;
+    
+    transition: opacity 0.4s ease-in-out 0.2s,
+                gap 0.4s ease-in-out;
+}
+
+.menu__active ul li {
+    text-align: center;
+
+    transform: translateY(0) scale(1);
+    transition: transform 0.3s ease-in-out 0.3s;
+}
+
+.menu__active ul li a, .menu__hidden ul li a  {
+    color: var(--text-color);
+    font-family: 'TASAOrbiterText-Regular',sans-serif;
+    font-weight: Medium;
+    text-decoration: none;
+    font-size: calc(1.8rem + 1vw);
+    transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+    i {
+        font-size: calc(1.7em + 0.8vw);
+    }
+
+    #toggleMenu {
+        font-size: calc(2.2em + 0.8vw);
+    }
+
+    .container-header {
+        width: 95%;
+    } 
+
+    .header__nav {
+        justify-content: space-between;
+        padding: 0 2em;
+    }
+
+    .header__actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: calc(1em + 0.5vw);
+    }
+
+    .header__actions i:hover, .header__actions:hover {
+        transform: none;
+    }
+
+    #toggleMenu {
+        display: block;
+    }
+
+    .menu__desktop {
+        display: none;
+    }
+        
+}
 
