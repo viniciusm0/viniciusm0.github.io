@@ -489,6 +489,34 @@ h4, p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2em;
+}
+
+.titleLearning h2 {
+    color: var(--title-color);
+    font-family: 'Coolvetica-Regular', sans-serif;
+    font-size: calc(1rem + 1.5vw);
+    text-align: center;
+    margin-bottom: .1em;
+}
+
+.titleLearning p {
+    text-align: center;
+    font-family: 'TASAOrbiterText-Regular', sans-serif;
+    font-size: calc(.5rem + .5vw);
+}
+
+.learning__brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.learning__brand i {
+    color: var(--title-color);
+    font-size: calc(1.25rem + 2vw)
 }
 
 
