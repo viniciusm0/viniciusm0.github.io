@@ -248,6 +248,7 @@ main h1 {
 }
 
 main p {
+    letter-spacing: 1px;
     font-size: calc(0.7rem + 0.4vw);    
 }
 
@@ -299,7 +300,8 @@ section#about-me {
 #about-me h1 {
     font-family: 'Metropolis-black', sans-serif;
     color: var(--title-color);
-    font-size: calc(2rem + 1.5vw)
+    font-size: calc(2rem + 1.5vw);
+    text-transform: uppercase;
 }
 
 h4, p {
@@ -308,6 +310,8 @@ h4, p {
 
 #about-me h4 {
     color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-size: calc(0.5rem + 0.5vw);
 }
 
@@ -397,6 +401,7 @@ h4, p {
     color: var(--title-color);
     font-size: calc(1.5rem + 2vw);
     text-align: center;
+    text-transform: uppercase;
 }
 
 .container__skills {
@@ -519,7 +524,106 @@ h4, p {
     font-size: calc(1.25rem + 2vw)
 }
 
+.projects {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
 
+.projects h1 {
+    font-family: 'Metropolis-black', sans-serif;
+    color: var(--title-color);
+    font-size: calc(2rem + 1.5vw);
+    text-transform: uppercase;
+}
+
+.container__projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10vw;
+    row-gap: 5em;
+    padding: 0 1em;
+}
+
+.cardProjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background: var(--secundary-color);
+    box-shadow: 
+        0 2px 8px 0 rgba(0, 0, 0, 0.2),
+        0 8px 32px 0 rgba(55, 65, 81, 0.5);
+    border-radius: 2em;
+    padding: .8em 1.5em 3em 1.5em;
+}
+
+.cardImg div {
+    width: 100%;
+    max-width: 430px;
+}
+
+.cardImg div img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 2.5em;
+    box-shadow: 
+        0 2px 8px 0 rgba(0, 0, 0, 0.2),
+        0 8px 32px 0 rgba(55, 65, 81, 0.5);
+}
+
+.cardTitle h2 {
+    font-family: 'Coolvetica-Regular';
+    color: var(--title-color);
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: calc(.6rem + 1vw);
+}
+
+.cardButtons {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+}
+
+.cardButtons a {
+    width: 35%;
+    text-align: center;
+    background: var(--btn-primary);
+    font-family: 'TASAOrbiterText-Regular';
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: calc(.3rem + .6vw);
+    color: var(--primary-color);
+    padding: 1.5vh 0;
+    border-radius: .9em;
+    transition: all .2s ease-in-out;
+}
+
+.cardButtons a:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.cardButtons a:active {
+    transform: scale(0.9);
+    transition: all .2s ease-in-out;
+}
+
+.cardButtons {
+    margin-top: 1em;
+}
 
 @media screen and (max-width: 991px) {
     i {
@@ -582,6 +686,44 @@ h4, p {
     .aboutMe__sideLeft hr, .aboutMe__sideRight hr {
         margin: 1em 0;
     }
-        
+
+    .projects {
+        height: 260vh;
+    }
+
+    .container__projects {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardProjects {
+        padding: .8em 1em 2em 1em;
+        margin: 0 .5em;
+    }
+
+    .cardImg div {
+        max-width: 350px;
+    }
+
+    .cardButtons a {
+        font-size: calc(.5rem + .8vw);
+    }
+
+    *:hover {
+        transform: none;
+    }
+
+    *:active {
+        transform: none;
+    }
+    
+}
+
+@media screen and (max-width: 991px) and (min-width: 920px) {
+    .projects {
+        height: 150vh;
+    }
 }
 
