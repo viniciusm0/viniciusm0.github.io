@@ -308,6 +308,7 @@ h4, p {
 
 #about-me h4 {
     color: var(--text-color);
+    font-size: calc(0.5rem + 0.5vw);
 }
 
 #about-me p {
@@ -315,7 +316,7 @@ h4, p {
     font-size: calc(1.5rem + 1.5vw);
 }
 
-.container__aboutMe {
+.container__aboutMe__desktop {
     margin-top: 3rem;
     width: 100%;
     display: grid;
@@ -324,6 +325,15 @@ h4, p {
     align-items: center;
     gap: 1rem;
     padding: 0em 4vw;
+}
+
+.aboutMe__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1.3em;
 }
 
 .aboutMe__sideLeft div, .aboutMe__sideRight div  {
@@ -362,6 +372,14 @@ h4, p {
     justify-self: right;
     text-align: right;
 
+}
+
+.container__aboutMe__mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -403,6 +421,27 @@ h4, p {
 
     main {
         padding: 2rem;
+    }
+
+    .container__aboutMe__desktop {
+        display: none;
+    }
+
+    .container__aboutMe__mobile {
+        display: flex;
+    }
+
+    #about-me p {
+        font-size: calc(1rem + 2vw);
+    }
+
+    .aboutMe__middle {
+        padding: 0 4vw;
+        max-width: 55vw;
+    }
+
+    .aboutMe__sideLeft hr, .aboutMe__sideRight hr {
+        margin: 1em 0;
     }
         
 }
