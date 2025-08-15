@@ -19,6 +19,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Metropolis-black";
+    src: url("../fonts/Metropolis-black.otf");
+    font-weight: Regular;
+    font-style: normal;
+}
+
+
+
 
 :root, :root[data-theme='dark'] {
 
@@ -28,7 +37,7 @@
     --border-color: #374151;
 
     --title-color: #E5E7EB;
-    --text-color: #9CA3AF;
+    --text-color: rgba(156, 163, 175, 0.7);
     --text-hover-color:#9dc1ff;
     --btn-primary: #60A5FA;
     --link-color: #60A5FA;
@@ -43,7 +52,7 @@
     --border-color: #E5E7EB;
 
     --title-color: #1E1E1E;
-    --text-color: #6B7280;
+    --text-color: rgba(107, 114, 128, 0.7);
     --text-hover-color: #4b93ff;
     --btn-primary: #2563EB;
     --link-color: #2563EB;
@@ -78,6 +87,8 @@ i {
 
 header {
     display: flex;
+    position: fixed;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin-top: 1.2vh;
@@ -186,7 +197,7 @@ header {
 }
 
 .menu__active {
-    max-height: 1000px;
+    max-height: 100vh;
     width: 90%;
     padding: 10em;
     border-top:var(--text-color) 1px solid;
@@ -218,20 +229,148 @@ header {
 
 .menu__active ul li a, .menu__hidden ul li a  {
     color: var(--text-color);
-    font-family: 'TASAOrbiterText-Regular',sans-serif;
-    font-weight: Medium;
+    font-family: 'TASAOrbiterText-Medium',sans-serif;
     text-decoration: none;
     font-size: calc(1.8rem + 1vw);
     transition: color 0.3s ease-in-out;
 }
 
+main h1, main p {
+    text-align: center;
+}
+
+main h1 {
+    color: var(--title-color);
+    font-family: 'Metropolis-black', sans-serif;
+    font-size: calc(3.5rem + 5vw);
+    align-self: center;
+    margin-bottom: .1em;
+}
+
+main p {
+    font-size: calc(0.7rem + 0.4vw);    
+}
+
+p {
+    color: var(--text-color);
+    font-family: 'TASAOrbiterText-Medium', sans-serif;
+}
+
+main nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+main nav i {
+    font-size: calc(1.8rem + 1vw);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    padding: 4em;
+}
+
+section {
+    height: 100vh;
+}
+
+.containerAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about-me h1 {
+    font-family: 'Metropolis-black', sans-serif;
+    color: var(--title-color);
+    font-size: calc(2rem + 1.5vw)
+}
+
+h4, p {
+    font-family: 'Coolvetica-Regular';
+}
+
+#about-me h4 {
+    color: var(--text-color);
+}
+
+#about-me p {
+    color: var(--title-color);
+    font-size: calc(1.5rem + 1.5vw);
+}
+
+.container__aboutMe {
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.25fr 2fr 1.25fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0em 4vw;
+}
+
+.aboutMe__sideLeft div, .aboutMe__sideRight div  {
+    max-width: 1;
+}
+
+.aboutMe__sideLeft { 
+    justify-self: left;
+    text-align: left;
+}
+
+.aboutMe__sideLeft hr, .aboutMe__sideRight hr {
+    margin: 2em 0;
+}
+
+.aboutMe__middle {
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    background: transparent;
+}
+
+.aboutMe__middle img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 
+        0 2px 8px 0 rgba(0, 0, 0, 0.2),
+        0 8px 32px 0 rgba(55, 65, 81, 0.5);
+}
+
+.aboutMe__sideRight {
+    justify-self: right;
+    text-align: right;
+
+}
+
 @media screen and (max-width: 991px) {
     i {
-        font-size: calc(1.7em + 0.8vw);
+        font-size: calc(1.7rem + 0.8vw);
     }
 
     #toggleMenu {
-        font-size: calc(2.2em + 0.8vw);
+        font-size: calc(2.2rem + 0.8vw);
     }
 
     .container-header {
@@ -251,7 +390,7 @@ header {
     }
 
     .header__actions i:hover, .header__actions:hover {
-        transform: none;
+        color: var(--text-color);
     }
 
     #toggleMenu {
@@ -260,6 +399,10 @@ header {
 
     .menu__desktop {
         display: none;
+    }
+
+    main {
+        padding: 2rem;
     }
         
 }
