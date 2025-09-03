@@ -1,0 +1,126 @@
+.containerAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about-me h1 {
+    font-family: 'Metropolis-black', sans-serif;
+    color: var(--title-color);
+    font-size: calc(2rem + 1.5vw);
+    text-transform: uppercase;
+}
+
+h4, p {
+    font-family: 'Coolvetica-Regular';
+}
+
+#about-me h4 {
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+#about-me p {
+    color: var(--title-color);
+    font-size: calc(1.5rem + 1.5vw);
+}
+
+.container__aboutMe__desktop {
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.25fr 2fr 1.25fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0em 4vw;
+}
+
+.aboutMe__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1.3em;
+}
+
+.aboutMe__sideLeft div, .aboutMe__sideRight div  {
+    max-width: 1;
+}
+
+.aboutMe__sideLeft { 
+    justify-self: left;
+    text-align: left;
+}
+
+.aboutMe__sideLeft hr, .aboutMe__sideRight hr {
+    margin: 2em 0;
+}
+
+.aboutMe__middle {
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    background: transparent;
+}
+
+.aboutMe__middle img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 2.5em;
+    box-shadow: 
+        0 2px 8px 0 rgba(0, 0, 0, 0.2),
+        0 8px 32px 0 rgba(55, 65, 81, 0.5);
+}
+
+.aboutMe__sideRight {
+    justify-self: right;
+    text-align: right;
+
+}
+
+.container__aboutMe__mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0 .6em;
+}
+
+@media screen and (max-width: 991px) {
+    .container__aboutMe__desktop {
+        display: none;
+    }
+
+    .container__aboutMe__mobile {
+        display: flex;
+    }
+
+    #about-me p {
+        font-size: calc(1rem + 2vw);
+    }
+
+    .aboutMe__middle {
+        padding: 0 4vw;
+        max-width: 55vw;
+    }
+
+    .aboutMe__sideLeft hr, .aboutMe__sideRight hr {
+        margin: 1em 0;
+    }
+}

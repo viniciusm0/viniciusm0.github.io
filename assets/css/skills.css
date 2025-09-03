@@ -1,0 +1,213 @@
+.skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+
+.skills h1 {
+    font-family: 'Metropolis-black', sans-serif;
+    color: var(--title-color);
+    font-size: calc(1.5rem + 2vw);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container__skills {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1.25fr;
+    justify-items: center;
+    align-items: start;
+    gap: 4vw;
+    padding: 0 1.5vw;
+}
+
+.skills__sideLeft, .skills__sideRight {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    align-items: start;
+    justify-items: center;
+    gap: 1.5em;
+    background-color: var(--secundary-color);
+    padding: 2vw 5vw;
+    border-radius: 2em;
+    box-shadow: 
+        0 2px 8px 0 rgba(0, 0, 0, 0.2),
+        0 8px 32px 0 rgba(55, 65, 81, 0.5);
+}
+
+.skills__sideRight {
+    height: 100%;
+}
+
+.title__skills {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.title__skills i, .title__skills h2 {
+    color: var(--title-color);
+}
+
+.title__skills i {
+    font-size: calc(1.5rem + 2.5vw);
+}
+
+.title__skills h2 {
+    font-family: 'Coolvetica-Regular';
+    font-size: calc(1rem + 1.5vw);
+    text-align: center;
+}
+
+.skills__brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills__brand .leftSide, .skills__brand .rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.skills__brand .rightSide {
+    align-self: start;
+}
+
+.skills__sideLeft .skills__brand .leftSide {
+    margin-right: 5vw;
+}
+
+.skills__middle {
+    align-self: center;
+    background-color: var(--text-color);
+    width: 1px;
+    height: 90%;
+}
+
+.leftSide i, .rightSide i {
+    color: var(--title-color);
+    font-size: calc(1.5rem + 2.5vw);
+}
+
+.learning {
+    height: 50vh;
+}
+
+.container__learning {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.titleLearning h2 {
+    color: var(--title-color);
+    font-family: 'Coolvetica-Regular', sans-serif;
+    font-size: calc(1rem + 1.5vw);
+    text-align: center;
+    margin-bottom: .1em;
+}
+
+.titleLearning p {
+    text-align: center;
+    font-family: 'TASAOrbiterText-Regular', sans-serif;
+    font-size: calc(.5rem + .5vw);
+}
+
+.learning__brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.learning__brand i {
+    color: var(--title-color);
+    font-size: calc(1.25rem + 2vw)
+}
+
+@media screen and (max-width: 991px) {
+    .skills {
+        height: 150vh;
+    }
+
+    .container__skills {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        gap: 3em;
+        width: 100%;
+    }
+
+    .skills__sideLeft {
+        gap: 4vh;
+    }
+
+    .skills__sideRight {
+        gap: 3em;
+    }
+
+    .skills__sideLeft, .skills__sideRight {
+        align-items: center;
+        padding: 3.5vh 5.5vw 4vh 5.5vw;
+    }
+
+    .skills__sideLeft .skills__brand .rightSide {
+        margin-left: 5vw;
+    }
+
+    .skills__middle {
+        display: none;
+    }
+
+    .skills__sideRight .skills__brand {
+        align-self: self-start;
+    }
+
+    .title__skills i {
+        font-size: calc(2.5rem + 3.5vw);
+    }
+
+    .title__skills h2 {
+        font-size: calc(2rem + 2.5vw);
+    }
+
+    .leftSide i, .rightSide i {
+        font-size: calc(3rem + 3vw);
+    }
+
+    .titleLearning h2 {
+        font-size: calc(1.6rem + 2vw);
+    }
+
+    .titleLearning p {
+        font-size: calc(.75rem + .75vw);
+    }
+
+    .learning__brand {
+        gap: 8vw;
+    }
+
+    .learning__brand i {
+        font-size: calc(2rem + 3vw);
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 920px) {
+    .skills {
+        height: 150vh;
+    }
+}

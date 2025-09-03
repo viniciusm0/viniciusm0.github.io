@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("../fonts/Coolvetica-Regular.otf") format(opentype);
+    font-weight: Regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TASAOrbiterText-Regular";
+    src: url("../fonts/TASAOrbiterText-Regular.otf");
+    font-weight: Regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TASAOrbiterText-Medium";
+    src: url("../fonts/TASAOrbiterText-Medium.otf");
+    font-weight: Medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Metropolis-black";
+    src: url("../fonts/Metropolis-black.otf");
+    font-weight: Regular;
+    font-style: normal;
+}

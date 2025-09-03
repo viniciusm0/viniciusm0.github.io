@@ -1,0 +1,117 @@
+@import url(fonts.css);
+@import url(navbar.css);
+@import url(main-section.css);
+@import url(about-me.css);
+@import url(skills.css);
+@import url(projects.css);
+@import url(contact.css);
+
+:root, :root[data-theme='dark'] {
+
+    --bg-color: linear-gradient(180deg, #121212 0%, #1F2937 100%);
+    --primary-color: #121212;
+    --secundary-color: #1F2937;
+    --border-color: #374151;
+
+    --title-color: #E5E7EB;
+    --text-color: rgba(156, 163, 175, 0.7);
+    --text-hover-color:#9dc1ff;
+    --btn-primary: #60A5FA;
+    --link-color: #60A5FA;
+
+}
+
+:root[data-theme='light'] {
+
+    --bg-color: linear-gradient(180deg, #F9FAFB 0%, #e4e4e4 100%);
+    --primary-color: #F9FAFB;
+    --secundary-color: #EEEEEE;
+    --border-color: #E5E7EB;
+
+    --title-color: #1E1E1E;
+    --text-color: rgba(107, 114, 128, 0.7);
+    --text-hover-color: #4b93ff;
+    --btn-primary: #2563EB;
+    --link-color: #2563EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+html {
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    transition: background .4s ease-in-out;
+}
+
+body {
+    background: transparent;
+    min-height: 100vh;
+}
+
+i {
+    color: var(--text-color);
+    font-size: calc(1.2em + 0.8vw);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+
+p {
+    color: var(--text-color);
+    font-family: 'TASAOrbiterText-Medium', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    padding: 4em;
+}
+
+section {
+    height: 100vh;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    height: 9vh;
+    text-align: center;
+    font-size: calc(.5rem + .6vw);
+    box-shadow: 
+        0 2px 8px 0 rgba(0, 0, 0, 0.2),
+        0 8px 32px 0 rgba(55, 65, 81, 0.5);
+}
+
+@media screen and (max-width: 991px) {
+    i {
+        font-size: calc(1.7rem + 0.8vw);
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    footer {
+        font-size: calc(.8rem + .9vw);
+    }
+
+    *:hover {
+        transform: none;
+    }
+
+    *:active {
+        transform: none;
+    }
+    
+}
